@@ -1,0 +1,8 @@
+# tensorflow-metal 1.2.0 breaks on TF >= 2.19 (dlopen error), so TF is pinned
+tensorflow==2.18.1
+tensorflow-metal==1.2.0; sys_platform == "darwin" and platform_machine == "arm64"
+pandas
+numpy
+pillow
+matplotlib
+scikit-learn
