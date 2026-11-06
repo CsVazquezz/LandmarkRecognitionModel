@@ -18,8 +18,9 @@ def main():
     names = data.classes().name.to_numpy()
 
     for path in args.images:
-        # same square crop and size as in training
-        img = keras.utils.load_img(path, target_size=data.IMG_SIZE, keep_aspect_ratio=True)
+        # same square crop, size and resizing method as in training
+        img = keras.utils.load_img(path, target_size=data.IMG_SIZE, keep_aspect_ratio=True,
+                                   interpolation="bilinear")
         batch = np.expand_dims(keras.utils.img_to_array(img), 0)    # the model expects a batch
         probs = model.predict(batch, verbose=0)[0]
         print(path)
