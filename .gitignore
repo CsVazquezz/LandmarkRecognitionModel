@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.DS_Store
+.codegraph/
+outputs/
+
+# the dataset and the script that builds it stay local
+data/
+src/download.py
+
+# LaTeX build files: only the source, figures and compiled PDF are tracked
+report/*
+!report/report.tex
+!report/report.pdf
+!report/figuras/
